@@ -3,13 +3,13 @@ import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class BookService {
+export class QueService {
 
   constructor(private http: Http) { }
 
-  getAllBooks() {
+  getAllQues() {
     return new Promise((resolve, reject) => {
-      this.http.get('/book')
+      this.http.get('/qie')
         .map(res => res.json())
         .subscribe(res => {
           resolve(res);
@@ -19,9 +19,9 @@ export class BookService {
     });
   }
 
-  showBook(id) {
+  showQue(id) {
     return new Promise((resolve, reject) => {
-        this.http.get('/book/' + id)
+        this.http.get('/que/' + id)
           .map(res => res.json())
           .subscribe(res => {
             resolve(res)
@@ -31,9 +31,9 @@ export class BookService {
     });
   }
 
-  saveBook(data) {
+  saveQue(data) {
     return new Promise((resolve, reject) => {
-        this.http.post('/book', data)
+        this.http.post('/que', data)
           .map(res => res.json())
           .subscribe(res => {
             resolve(res);
@@ -43,9 +43,9 @@ export class BookService {
     });
   }
 
-  updateBook(id, data) {
+  updateQue(id, data) {
     return new Promise((resolve, reject) => {
-        this.http.put('/book/'+id, data)
+        this.http.put('/que/'+id, data)
           .map(res => res.json())
           .subscribe(res => {
             resolve(res);
@@ -55,9 +55,9 @@ export class BookService {
     });
   }
 
-  deleteBook(id) {
+  deleteQue(id) {
     return new Promise((resolve, reject) => {
-        this.http.delete('/book/'+id)
+        this.http.delete('/que/'+id)
           .subscribe(res => {
             resolve(res);
           }, (err) => {
