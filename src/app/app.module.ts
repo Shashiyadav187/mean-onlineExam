@@ -7,42 +7,42 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { BookComponent } from './book/book.component';
-import { BookDetailComponent } from './book-detail/book-detail.component';
-import { BookCreateComponent } from './book-create/book-create.component';
-import { BookEditComponent} from './book-edit/book-edit.component'
+import { QueComponent } from './que/que.component';
+import { QueCreateComponent } from './que-create/que-create.component';
+import { QueDetailComponent } from './que-detail/que-detail.component';
+import { QueEditComponent } from './que-edit/que-edit.component'
 
 const ROUTES = [
   {
     path: '',
-    redirectTo: '/books',
+    redirectTo: '/ques',
     pathMatch: 'full'
   },
   {
-    path: 'books',
-    component: BookComponent
+    path: 'ques',
+    component: QueComponent
   },
   {
-    path: 'book-details/:id',
-    component: BookDetailComponent
+    path: 'que-details/:id',
+    component: QueDetailComponent
   },
   {
-    path: 'book-create',
-    component: BookCreateComponent
+    path: 'que-create',
+    component: QueCreateComponent
   },
   {
-    path: 'book-edit/:id',
-    component: BookEditComponent
+    path: 'que-edit/:id',
+    component: QueEditComponent
   }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
-    BookDetailComponent,
-    BookCreateComponent,
-    BookEditComponent
+    QueComponent,
+    QueCreateComponent,
+    QueDetailComponent,
+    QueEditComponent
   ],
   imports: [
     BrowserModule,

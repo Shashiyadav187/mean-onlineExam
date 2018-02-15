@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{ que.question }}</h1>
+  <dl class="list">
+    <dt>A</dt>
+    <dd>{{ que.a }}</dd>
+    <dt>B</dt>
+    <dd>{{ que.b }}</dd>
+    <dt>C</dt>
+    <dd>{{ que.c }}</dd>
+    <dt>D</dt>
+    <dd>{{ que.d }}</dd>
+    <dt>Answer</dt>
+    <dd>{{ que.answer }}</dd>
+  </dl>
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/que-edit', que._id]" class="btn btn-success">EDIT</a>
+      <button class="btn btn-danger" type="button" (click)="deleteQue(que._id)">DELETE</button>
+      <a [routerLink]="['/ques']" class="btn btn-primary">Back</a>
+    </div>
+  </div>
+</div>
