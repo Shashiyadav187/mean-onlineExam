@@ -20,7 +20,7 @@ router.get('/:id', function(req, res, next) {
 });
 
 /* SAVE Que */
-Que.post('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
   Que.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);

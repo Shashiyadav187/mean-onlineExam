@@ -7,11 +7,11 @@ var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/mean-Exam-Que')
+mongoose.connect('mongodb://localhost/mean-exam')
   .then(() =>  console.log('connection successful'))
   .catch((err) => console.error(err));
 
-var book = require('./routes/que');
+var que = require('./routes/que');
 var app = express();
 
 app.use(logger('dev'));

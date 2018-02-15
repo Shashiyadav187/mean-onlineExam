@@ -9,7 +9,7 @@ export class QueService {
 
   getAllQues() {
     return new Promise((resolve, reject) => {
-      this.http.get('/qie')
+      this.http.get('/que')
         .map(res => res.json())
         .subscribe(res => {
           resolve(res);

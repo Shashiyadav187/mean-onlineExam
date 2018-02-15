@@ -1,5 +1,3 @@
-import { String } from 'core-js/library/web/timers';
-
 var mongoose = require('mongoose');
 
 var QueSchema = new mongoose.Schema({
