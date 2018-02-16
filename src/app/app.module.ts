@@ -33,14 +33,17 @@ const ROUTES = [
   },
   {
     path: 'que-details/:id',
+    canActivate : [LogAuthGuard],
     component: QueDetailComponent
   },
   {
     path: 'que-create',
+    canActivate : [LogAuthGuard],
     component: QueCreateComponent
   },
   {
     path: 'que-edit/:id',
+    canActivate : [LogAuthGuard],
     component: QueEditComponent
   }
 ];
