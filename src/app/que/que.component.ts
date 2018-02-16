@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QueService } from "../que.service";
+import { LoginService } from "../login.service";
 
 @Component({
   selector: 'app-que',
@@ -10,7 +11,7 @@ export class QueComponent implements OnInit {
 
   ques: any;
 
-  constructor(private queService : QueService) {  }
+  constructor(private queService : QueService,private loginService : LoginService) {  }
 
   ngOnInit() {
     this.getQueList()

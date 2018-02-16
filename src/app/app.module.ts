@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { QueService } from './que.service';
+import {LoginService } from './login.service'
 import { RouterModule } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -12,6 +13,8 @@ import { QueCreateComponent } from './que-create/que-create.component';
 import { QueDetailComponent } from './que-detail/que-detail.component';
 import { QueEditComponent } from './que-edit/que-edit.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+
+import { LogAuthGuard } from './log-auth.guard';
 
 const ROUTES = [
   {
@@ -25,6 +28,7 @@ const ROUTES = [
   },
   {
     path: 'ques',
+    canActivate : [LogAuthGuard],
     component: QueComponent
   },
   {
@@ -59,6 +63,8 @@ const ROUTES = [
   ],
   providers: [
     QueService,
+    LoginService,
+    LogAuthGuard,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService} from '../login.service'
 
 @Component({
   selector: 'app-login-form',
@@ -13,7 +14,7 @@ export class LoginFormComponent implements OnInit {
   password : string;
 
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, private loginService : LoginService) { }
 
   ngOnInit() {
   }
@@ -24,6 +25,7 @@ export class LoginFormComponent implements OnInit {
     this.password = this.log["password"];
 
     if(this.name == "admin" && this.password == "admin" ){
+        this.loginService.setUserLoggedIn();
         this.router.navigate(['ques']);
     }
 
