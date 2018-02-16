@@ -1,0 +1,14 @@
+<form (submit)="loginUser()" #logForm="ngForm">
+  <div>
+    <label>User Name</label>
+    <input type="text" [(ngModel)]="log.name" name="name" >
+  </div>
+  <div>
+    <label>Password</label>
+    <input type="password" [(ngModel)]="log.password" name="password">
+  </div>
+  <div>
+    <input type="submit" value="Login" [disabled]="!logForm.form.valid">
+  </div>
+
+</form>

@@ -11,12 +11,17 @@ import { QueComponent } from './que/que.component';
 import { QueCreateComponent } from './que-create/que-create.component';
 import { QueDetailComponent } from './que-detail/que-detail.component';
 import { QueEditComponent } from './que-edit/que-edit.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const ROUTES = [
   {
     path: '',
-    redirectTo: '/ques',
+    redirectTo: '/login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginFormComponent
   },
   {
     path: 'ques',
@@ -43,6 +48,7 @@ const ROUTES = [
     QueCreateComponent,
     QueDetailComponent,
     QueEditComponent,
+    LoginFormComponent,
     
   ],
   imports: [
