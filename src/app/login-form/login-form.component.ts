@@ -29,6 +29,7 @@ export class LoginFormComponent implements OnInit {
     //     this.loginService.setUserLoggedIn();
     //     this.router.navigate(['ques']);
     //}
+    
     this.loginService.setUserLoggedIn(log);
 
 
